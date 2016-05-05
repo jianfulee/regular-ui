@@ -93,12 +93,8 @@ var Modal = Component.extend({
         this.destroy();
     },
     /**
-     * @private
+     * _onKeyUp函数没有作用，button聚焦后默认的回车行为就是onclick，所以多余  
      */
-    _onKeyUp: function($event) {
-        if($event.which == 13)
-            this.ok();
-    },
     _onDragStart: function($event) {
         var dialog = $event.proxy;
         dialog.style.left = dialog.offsetLeft + 'px';
